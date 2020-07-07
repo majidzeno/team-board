@@ -14,6 +14,11 @@
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+# App Design
+
+> This app designed into Figma , it is still not finished , feel free to ask for access if you could contribute.
+> [FigmaLink](https://www.figma.com/file/0sO5jnyBkFeB90nXUejbeX/TeamBoard?node-id=8%3A1)
+
 <!-- ## Install
 
 ```bash
