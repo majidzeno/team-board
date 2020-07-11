@@ -64,7 +64,7 @@ const BUTTON_MODIFIERS = {
 
 export const BaseButton = styled.button`
 	border: none;
-	color: white;
+	color: ${({ theme }) => theme.textColorPrimary};
 	width: 185px;
 	text-align: center;
 	padding: 12px 24px;
@@ -73,11 +73,11 @@ export const BaseButton = styled.button`
 	cursor: pointer;
 `;
 
-export const PrimaryButton = styled(BaseButton)<{ [x: string]: any }>`
+export const PrimaryButtonWrapper = styled(BaseButton)<{ [x: string]: any }>`
 	background-color: ${({ theme }) => theme.primaryColor};
 	box-shadow: -8px -8px 16px #e0e0e0, 8px 8px 16px rgba(0, 83, 128, 0.4);
 	border-radius: 10px;
-	transition: all 0.2s ease-in-out;
+	transition: ${({ theme }) => theme.componentTransition}
 	&:hover {
 		background-color: ${({ theme }) => theme.primaryHoverColor};
 		font-size: ${({ theme }) => theme.buttonTextSizeOnHover};

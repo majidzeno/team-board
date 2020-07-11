@@ -1,0 +1,62 @@
+/** @format */
+
+import React from "react";
+import { ResponsivePie } from "@nivo/pie";
+
+type Data = {
+	id: string;
+	label: string;
+	value: number;
+	color: string;
+};
+
+// const getColor = ({ color }: { color: string }): string => color;
+
+const Chart = ({ data }: { data: Data[] }) => (
+	<ResponsivePie
+		data={data}
+		margin={{ top: 10, right: 50, bottom: 10, left: 50 }}
+		startAngle={0}
+		innerRadius={0.65}
+		padAngle={0.0}
+		cornerRadius={0}
+		colors={data.map((item) => item.color)}
+		borderWidth={0}
+		borderColor="black"
+		radialLabelsSkipAngle={10}
+		radialLabelsTextXOffset={0}
+		radialLabelsTextColor="#333333"
+		radialLabelsLinkOffset={0}
+		radialLabelsLinkDiagonalLength={6}
+		radialLabelsLinkHorizontalLength={5}
+		radialLabelsLinkStrokeWidth={1}
+		radialLabelsLinkColor={{ from: "color" }}
+		slicesLabelsSkipAngle={10}
+		slicesLabelsTextColor="#fff"
+		animate={true}
+		motionStiffness={90}
+		motionDamping={15}
+		legends={[
+			{
+				anchor: "bottom",
+				direction: "row",
+				translateY: 0,
+				itemWidth: 100,
+				itemHeight: 18,
+				itemTextColor: "#999",
+				symbolSize: 18,
+				symbolShape: "circle",
+				effects: [
+					{
+						on: "hover",
+						style: {
+							itemTextColor: "#000",
+						},
+					},
+				],
+			},
+		]}
+	/>
+);
+
+export default Chart;

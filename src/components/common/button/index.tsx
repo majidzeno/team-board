@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { PrimaryButton } from "./style";
+import { PrimaryButtonWrapper } from "./style";
 
 export type BaseButtonProps = {
 	children?: React.ReactNode;
@@ -10,7 +10,7 @@ export type BaseButtonProps = {
 
 const Button: React.FunctionComponent<BaseButtonProps> = (props) => {
 	const { children, ...rest } = props;
-	return <PrimaryButton {...rest}>{children}</PrimaryButton>;
+	return <PrimaryButtonWrapper {...rest}>{children}</PrimaryButtonWrapper>;
 };
 
 export default Button;
