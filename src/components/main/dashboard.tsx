@@ -5,7 +5,6 @@ import { Button } from "@material-ui/core";
 import Card from "../common/card";
 import { ChartContainer } from "./style";
 import Chart from "../chart";
-import { purple } from "../../utils";
 
 const Dashboard = () => {
 	return (

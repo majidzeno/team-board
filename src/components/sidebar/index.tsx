@@ -12,16 +12,22 @@ import SvgIcon from "../svgIcons";
 import userPlacholder from "../../assets/Images/ph.png";
 import Button from "../common/button";
 import { useTabs } from "../../context/screenContext";
+import { useTheme } from "@material-ui/core/styles";
 
 const listItemsData = ["dashboard", "me", "team", "tasks"];
-const SidebarItem = ({ name }: { name: string }) => {
+const SidebarItem = ({ name, first }: { name: string; first: boolean }) => {
 	const { state, activateTab }: { state: any; activateTab: any } = useTabs();
+	console.log("state", state);
+	const theme = useTheme();
+
 	return (
-		<ListItemOuter>
+		<ListItemOuter key={name}>
 			<ListItemInner
 				to={`/${name}`}
-				// activeScreen={state[name]}
-				modifiers={state[name] ? "active" : null}
+				activeStyle={{
+					backgroundColor: theme.palette.grey[500],
+				}}
+				modifiers={first ? "first" : null}
 				onClick={() => activateTab({ activeTab: name })}>
 				<SvgIcon name={name} />
 				<ListItemInner.Text>{name}</ListItemInner.Text>
@@ -32,10 +38,9 @@ const SidebarItem = ({ name }: { name: string }) => {
 
 const Sidebar = (props: any) => {
 	const { darkThemeActive, setDarkThemeActive } = props;
-
-	const sidebarListItems = listItemsData.map((item: string) => (
-		<SidebarItem name={item} key={item} />
-	));
+	const sidebarListItems = listItemsData.map((item: string, i: number) => {
+		return <SidebarItem name={item} key={item} first={i === 0} />;
+	});
 
 	return (
 		<SidebarContainer>

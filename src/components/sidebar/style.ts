@@ -1,9 +1,9 @@
 /** @format */
 
 import styled from "styled-components";
-import { typescale } from "../../utils";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { applyStyleModifiers } from "styled-components-modifiers";
+import { typescale } from "../../utils/typography";
 
 export const SidebarContainer: any = styled.aside`
 	display: flex;
@@ -13,8 +13,8 @@ export const SidebarContainer: any = styled.aside`
 	width: 100%;
 	height: 100vh;
 	justify-content: space-between;
-	background-color: ${({ theme }) => theme.sidebarBg};
-	border: 1px solid ${({ theme }) => theme.lightBr};
+	background-color: ${({ theme }) => theme.palette.grey[200]};
+	border: 1px solid ${({ theme }) => theme.palette.grey[400]};
 `;
 export const SidebarContainerInner = styled.div`
 	display: flex;
@@ -33,11 +33,11 @@ const LogoInnerContainer = styled.div`
 	}
 `;
 const UserOuterContainer = styled.div`
-	background-color: ${({ theme }) => theme.sidebarBg};
+	background-color: ${({ theme }) => theme.palette.grey[200]};
 	width: 100%;
 `;
 const UserInnerContainer = styled.div`
-	background-color: ${({ theme }) => theme.sidebarBg};
+	background-color: ${({ theme }) => theme.palette.grey[200]};
 	/* border-bottom-right-radius: 40px; */
 	display: flex;
 	width: 100%;
@@ -50,7 +50,7 @@ export const User: any = styled.div`
 	/* padding: 3px; */
 	align-items: center;
 	justify-content: center;
-	border: 1px solid ${({ theme }) => theme.lightBr};
+	border: 1px solid ${({ theme }) => theme.palette.grey[400]};
 	border-width: 1px 0 1px 0;
 	padding: 15px;
 `;
@@ -62,7 +62,7 @@ const Img = styled.div.attrs(({ altText }: { altText: string }) => ({
 	background-repeat: no-repeat;
 	padding-top: 20%;
 	border-radius: 50%;
-	border: 2px solid ${({ theme }) => theme.sidebarItemBg};
+	border: 2px solid ${({ theme }) => theme.palette.grey[200]};
 	background-position: center;
 	width: 100%;
 	max-width: 20%;
@@ -72,7 +72,7 @@ const Data = styled.div`
 	flex-direction: column;
 	width: 100%;
 	max-width: 80%;
-	color: ${({ theme }) => theme.textColor};
+	color: ${({ theme }) => theme.palette.text.primary};
 	letter-spacing: 0.5px;
 	margin-left: 2px;
 `;
@@ -82,8 +82,7 @@ const Name = styled.div`
 `;
 const Position = styled.div`
 	font-family: primaryFontMedium;
-	color: ${({ theme }) => theme.secondaryColor};
-	/* font-family: primaryFontRegular; */
+	color: ${({ theme }) => theme.palette.text.secondary};
 	font-size: ${typescale.subtitle};
 `;
 User.Img = Img;
@@ -91,49 +90,49 @@ User.Data = Data;
 User.Data.Name = Name;
 User.Data.Position = Position;
 const ItemsOuterContainer = styled.div`
-	background-color: ${({ theme }) => theme.sidebarItemBg};
+	background-color: ${({ theme }) => theme.palette.grey[200]};
 	width: 100%;
 `;
+
+export const ListItemOuter = styled.li`
+	background-color: ${({ theme }) => theme.palette.grey[200]};
+	color: ${({ theme }) => theme.palette.text.primary};
+	font-size: ${typescale.subtitle};
+	cursor: pointer;
+`;
 const ItemsInnerContainer = styled.ul`
-	background-color: ${({ theme }) => theme.sidebarItemBg};
+	background-color: ${({ theme }) => theme.palette.grey[200]};
 	list-style: none;
 	margin: 0;
 	padding: 100px 0 100px 0;
 `;
 
-export const ListItemOuter = styled.li`
-	background-color: ${({ theme }) => theme.sidebarItemBg};
-	color: ${({ theme }) => theme.textColor};
-	font-size: ${({ theme }) => theme.buttonTextSize};
-	cursor: pointer;
-`;
 const LIST_ITEM_STATE = {
-	active: ({ theme }: { theme: any }) => `
-	background-color:${theme.sidebarItemHoverBg};
-	
+	first: () => `
+		border-top-width:1px;
 	`,
 };
-export const ListItemInner: any = styled(Link)`
-	color: ${({ theme }) => theme.textColor};
+export const ListItemInner: any = styled(NavLink)`
+	color: ${({ theme }) => theme.palette.text.primary};
 	font-family: primaryFontMedium;
-	transition: ${({ theme }) => theme.componentTransition};
-	border: 1px solid ${({ theme }) => theme.lightBr};
-	border-top-width:0;
+	/* transition: ${({ theme }) => theme.componentTransition}; */
+	border: 1px solid ${({ theme }) => theme.palette.grey[400]};
 	text-decoration:none;
 	padding: 12px 15px;
 	display: flex;
 	align-items: center;
-
+	font-size:16px;
+	border-width:0 0 1px 0;
 	svg {
 		margin-right: 10px;
 		width: 23px;
 		height: 23px;
 		path {
-			fill: ${({ theme }) => theme.textColor};
+			fill: ${({ theme }) => theme.palette.text.primary};
 		}
 	}
 	&:hover {
-		background-color: ${({ theme }) => theme.sidebarItemHoverBg};
+		background-color: ${({ theme }) => theme.palette.grey[300]};
 		/* font-size: ${({ theme }) => theme.buttonTextSizeOnHover}; */
 		/* border-radius: 30px 0 0 30px; */
 		/* color: ${({ theme }) => theme.textColorPrimary}; */
@@ -147,9 +146,10 @@ export const ListItemInner: any = styled(Link)`
 		/* outline-offset: 3px; */
 	}
 	&:active {
-		background-color: ${({ theme }) => theme.sidebarItemHoverBg};
+		background-color: ${({ theme }) => theme.palette.grey[300]};
 		/* color: ${({ theme }) => theme.textColorPrimary}; */
-		font-size: ${({ theme }) => theme.buttonTextSize};
+		/* font-size: ${({ theme }) => theme.buttonTextSize}; */
+	font-size: ${typescale.header6};
 		/* box-shadow: -8px -8px 16px rgba(0, 207, 248, 0.22), */
 			/* 8px 8px 16px rgba(0, 153, 184, 0.38); */
 		/* path {
@@ -158,6 +158,7 @@ export const ListItemInner: any = styled(Link)`
 	}
 	${applyStyleModifiers(LIST_ITEM_STATE)};
 `;
+
 const Text = styled.div`
 	text-transform: capitalize;
 `;

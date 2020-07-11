@@ -8,7 +8,6 @@ type Data = {
 	label: string;
 	value: number;
 	color: string;
-	stroke: string;
 };
 const theme = {
 	axis: {
@@ -52,7 +51,7 @@ const Chart = ({ data }: { data: Data[] }) => {
 			// 	from: "color",
 			// 	modifiers: [["brighter", "0.5"]],
 			// }}
-			slicesLabelsTextColor="#f88"
+			slicesLabelsTextColor="#fff"
 			animate={true}
 			motionStiffness={90}
 			motionDamping={15}
