@@ -1,20 +1,23 @@
 /** @format */
 
 import React from "react";
+import { Button } from "@material-ui/core";
 import Card from "../common/card";
-import { DaysCount } from "./style";
+import { ChartContainer } from "./style";
 import Chart from "../chart";
+import { purple } from "../../utils";
 
 const Dashboard = () => {
 	return (
 		<div>
 			<h1>Dashboard</h1>
 			<Card>
-				<Chart />
-				<DaysCount>
-					<DaysCount.Taken>14</DaysCount.Taken>
-					<DaysCount.Remaining>7</DaysCount.Remaining>
-				</DaysCount>
+				<ChartContainer>
+					<Chart />
+				</ChartContainer>
+				<Button variant="contained" color="primary">
+					Request holiday
+				</Button>
 			</Card>
 		</div>
 	);

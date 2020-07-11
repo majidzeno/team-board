@@ -12,26 +12,7 @@ export const MainContainer: any = styled.main`
 	height: 100vh;
 	justify-content: space-between;
 `;
-
-export const DaysCount: any = styled.div`
-	border: 2px solid orange;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+export const ChartContainer = styled.div`
 	width: 100%;
+	height: 80%;
 `;
-
-const Taken = styled.div`
-	width: 100%;
-	max-width: 50%;
-	border: 2px solid red;
-	text-align: center;
-`;
-const Remaining = styled.div`
-	width: 100%;
-	max-width: 50%;
-	border: 2px solid blue;
-	text-align: center;
-`;
-DaysCount.Taken = Taken;
-DaysCount.Remaining = Remaining;

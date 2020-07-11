@@ -2,14 +2,27 @@
 
 import { blue, neutral, green, red, yellow } from "./colors";
 import { typescale } from "./typography";
+import { createMuiTheme } from "@material-ui/core";
+
+// const theme = createMuiTheme({
+// 	palette: {
+// 		primary: purple[500],
+// 	},
+// });
 
 export const defaultTheme = {
 	// General
 	background: neutral[100],
+	textColor: neutral[600],
+	secondaryColor: neutral[400],
+
+	// Borders
+	lightBr: neutral[300],
 	// Buttons,Tabs,Texts
-	primaryColor: blue[700],
-	primaryHoverColor: blue[500],
-	primaryActiveColor: blue[300],
+
+	// primaryColor: blue[700],
+	// primaryHoverColor: blue[500],
+	// primaryActiveColor: blue[300],
 	primaryDisabledColor: neutral[400],
 	textColorPrimary: neutral[100],
 	textColorDisabled: neutral[300],
@@ -21,13 +34,11 @@ export const defaultTheme = {
 	buttonTextSizeOnHover: typescale.header6,
 	componentTransition: "all 0.2s ease-in-out",
 
-	sidebarLogoContainerColor: blue[700],
-	sidebarUserContainerColor: blue[600],
-	sidebarItemsContainerColor: blue[500],
-	sidebarItemBackgroundColor: blue[500],
-	sidebarItemHoverBackgroundColor: blue[400],
-	sidebarItemActiveBackgroundColor: blue[300],
-	sidebarItemTextColor: blue[100],
+	sidebarBg: neutral[200],
+	sidebarItemBg: neutral[200],
+	sidebarItemBr: neutral[300],
+	sidebarItemHoverBg: neutral[300],
+
 	status: {
 		successColor: green[300],
 		successHoverColor: green[200],
@@ -37,9 +48,9 @@ export const defaultTheme = {
 		warningHoverColor: yellow[200],
 		warningActiveColor: yellow[100],
 
-		errorColor: red[300],
-		errorHoverColor: red[200],
-		errorActiveColor: red[100],
+		// errorColor: red[300],
+		// errorHoverColor: red[200],
+		// errorActiveColor: red[100],
 	},
 
 	// Elements
@@ -64,9 +75,9 @@ export const darkTheme = {
 	secondaryFont: "secondaryFont",
 	buttonTextSize: typescale.subtitle,
 
-	sidebarLogoContainerColor: blue[700],
-	sidebarUserContainerColor: blue[600],
-	sidebarItemsContainerColor: blue[500],
+	// sidebarLogoContainerColor: blue[700],
+	// sidebarUserContainerColor: blue[600],
+	// sidebarItemsContainerColor: blue[500],
 
 	status: {
 		successColor: green[300],
@@ -77,8 +88,8 @@ export const darkTheme = {
 		warningHoverColor: yellow[200],
 		warningActiveColor: yellow[100],
 
-		errorColor: red[300],
-		errorHoverColor: red[200],
-		errorActiveColor: red[100],
+		// errorColor: red[300],
+		// errorHoverColor: red[200],
+		// errorActiveColor: red[100],
 	},
 };
