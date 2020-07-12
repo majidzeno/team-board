@@ -20,7 +20,8 @@
 		"react-scripts": "3.4.1",
 		"styled-components": "5.1.1",
 		"styled-components-modifiers": "1.2.5",
-		"styled-icons": "10.6.0"
+		"styled-icons": "10.6.0",
+		"websocket-extensions": "0.1.4"
 	},
 	"typings": "lib/index.d.ts",
 	"scripts": {
