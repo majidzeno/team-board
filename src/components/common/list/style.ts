@@ -1,6 +1,6 @@
 /** @format */
 
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { typescale } from "../../../utils/typography";
 // import Card from "../card";
 

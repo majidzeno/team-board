@@ -1,6 +1,6 @@
 /** @format */
 
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export const MainContainer: any = styled.main`
 	display: flex;
@@ -21,4 +21,8 @@ export const ChartContainer = styled.div`
 export const Container = styled.div`
 	display: flex;
 	align-items: center;
+`;
+
+export const Panel = styled.div`
+	width: 100%;
 `;
