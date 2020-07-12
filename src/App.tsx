@@ -2,8 +2,9 @@
 
 import React from "react";
 // import PrimaryButton from "./components/button";
-import { GlobalStyles, defaultTheme, darkTheme } from "./utils";
-import { Container } from "./components/common/button/style";
+import { defaultTheme, darkTheme } from "./utils/themes";
+import { GlobalStyles } from "./utils/global";
+import { Container } from "./components/main/style";
 import { ThemeProvider } from "styled-components";
 import Sidebar from "./components/sidebar";
 import Main from "./components/main";

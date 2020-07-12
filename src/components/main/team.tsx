@@ -1,12 +1,14 @@
 /** @format */
 
 import React from "react";
-
+import Members from "../team";
+import { Panel } from "./style";
 const Team = () => {
 	return (
-		<div>
-			<h1>Team</h1>
-		</div>
+		<Panel>
+			<h1>Team Members </h1>
+			<Members />
+		</Panel>
 	);
 };
 

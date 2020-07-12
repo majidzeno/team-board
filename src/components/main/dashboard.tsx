@@ -2,19 +2,24 @@
 
 import React from "react";
 import Card from "../common/card";
-import { DaysCount } from "./style";
+import { ChartContainer } from "./style";
 import Chart from "../chart";
+import { Button } from "@material-ui/core";
 
 const Dashboard = () => {
 	return (
 		<div>
 			<h1>Dashboard</h1>
 			<Card>
-				<Chart />
-				<DaysCount>
-					<DaysCount.Taken>14</DaysCount.Taken>
-					<DaysCount.Remaining>7</DaysCount.Remaining>
-				</DaysCount>
+				<ChartContainer>
+					<Chart />
+				</ChartContainer>
+				<Button
+					variant="contained"
+					color="primary"
+					style={{ textTransform: "capitalize" }}>
+					Request holiday
+				</Button>
 			</Card>
 		</div>
 	);

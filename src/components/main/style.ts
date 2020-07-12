@@ -1,6 +1,6 @@
 /** @format */
 
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export const MainContainer: any = styled.main`
 	display: flex;
@@ -11,27 +11,18 @@ export const MainContainer: any = styled.main`
 	width: 100%;
 	height: 100vh;
 	justify-content: space-between;
+	padding: 5%;
+`;
+export const ChartContainer = styled.div`
+	width: 100%;
+	height: 80%;
 `;
 
-export const DaysCount: any = styled.div`
-	border: 2px solid orange;
+export const Container = styled.div`
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	width: 100%;
 `;
 
-const Taken = styled.div`
+export const Panel = styled.div`
 	width: 100%;
-	max-width: 50%;
-	border: 2px solid red;
-	text-align: center;
 `;
-const Remaining = styled.div`
-	width: 100%;
-	max-width: 50%;
-	border: 2px solid blue;
-	text-align: center;
-`;
-DaysCount.Taken = Taken;
-DaysCount.Remaining = Remaining;

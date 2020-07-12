@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"@material-ui/core": "4.11.0",
 		"@nivo/pie": "0.62.0",
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.3.2",
@@ -19,7 +20,8 @@
 		"react-scripts": "3.4.1",
 		"styled-components": "5.1.1",
 		"styled-components-modifiers": "1.2.5",
-		"styled-icons": "10.6.0"
+		"styled-icons": "10.6.0",
+		"websocket-extensions": "0.1.4"
 	},
 	"typings": "lib/index.d.ts",
 	"scripts": {
@@ -45,6 +47,7 @@
 	},
 	"devDependencies": {
 		"@types/styled-components": "5.1.0",
+		"babel-plugin-styled-components": "1.10.7",
 		"typescript": "3.6.5"
 	}
 }
