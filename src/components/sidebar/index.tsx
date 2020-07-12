@@ -10,7 +10,7 @@ import {
 } from "./style";
 import SvgIcon from "../svgIcons";
 import userPlacholder from "../../assets/Images/ph.png";
-import Button from "../common/button";
+// import Button from "../common/button";
 import { useTabs } from "../../context/screenContext";
 import { useTheme } from "@material-ui/core/styles";
 
@@ -70,9 +70,9 @@ const Sidebar = (props: any) => {
 					</SidebarContainer.ItemsInnerContainer>
 				</SidebarContainer.ItemsOuterContainer>
 			</SidebarContainerInner>
-			<Button onClick={() => setDarkThemeActive(!darkThemeActive)}>
+			{/* <Button onClick={() => setDarkThemeActive(!darkThemeActive)}>
 				{darkThemeActive ? "Light Theme" : "Dark Theme"}
-			</Button>
+			</Button> */}
 		</SidebarContainer>
 	);
 };

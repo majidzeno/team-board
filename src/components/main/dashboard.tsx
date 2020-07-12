@@ -1,10 +1,10 @@
 /** @format */
 
 import React from "react";
-import { Button } from "@material-ui/core";
 import Card from "../common/card";
 import { ChartContainer } from "./style";
 import Chart from "../chart";
+import { Button } from "@material-ui/core";
 
 const Dashboard = () => {
 	return (
@@ -14,7 +14,10 @@ const Dashboard = () => {
 				<ChartContainer>
 					<Chart />
 				</ChartContainer>
-				<Button variant="contained" color="primary">
+				<Button
+					variant="contained"
+					color="primary"
+					style={{ textTransform: "capitalize" }}>
 					Request holiday
 				</Button>
 			</Card>

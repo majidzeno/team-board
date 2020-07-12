@@ -15,4 +15,5 @@ export const CardContainer = styled.div`
 	/* box-shadow: ${({ theme }) => theme.cardShadow}; */
 	border:1px solid ${({ theme }) => theme.lightBr};
 	border-radius: 33px;
+	overflow:hidden;
 `;

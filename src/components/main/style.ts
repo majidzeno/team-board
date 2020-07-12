@@ -11,8 +11,14 @@ export const MainContainer: any = styled.main`
 	width: 100%;
 	height: 100vh;
 	justify-content: space-between;
+	padding: 5%;
 `;
 export const ChartContainer = styled.div`
 	width: 100%;
 	height: 80%;
+`;
+
+export const Container = styled.div`
+	display: flex;
+	align-items: center;
 `;
