@@ -9,7 +9,7 @@ import { Route } from "react-router-dom";
 import Me from "./me";
 import Tasks from "./tasks";
 import Team from "./team";
-import Dashboard from "./dashboard";
+import Dashboard from "./dashboardPanel";
 
 export const Main = (props: any) => {
 	// const { state, activateTab }: { state: any; activateTab: any } = useTabs();
