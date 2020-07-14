@@ -3,23 +3,29 @@
 import React from "react";
 import Chart from "./chartWrapper";
 import { useTheme } from "@material-ui/core/styles";
+import { useUserState } from "../../context/userContext";
 
 const ChartContainer = () => {
 	const theme = useTheme();
-	console.log("Theeme", theme);
-
+	const UserState = useUserState();
+	const reducer = (val1: number, val2: number) => {
+		return val1 + val2;
+	};
+	const takenDays: number = UserState.vacationsRequests
+		.map((item: any) => item.days)
+		.reduce(reducer, 0);
 	const data = [
 		{
 			id: "Remaining",
 			label: "Remaining",
-			value: 7,
-			color: theme.palette.info.main,
+			value: 21 - takenDays,
+			color: theme.palette.primary.main,
 		},
 		{
 			id: "Taken",
 			label: "Taken",
-			value: 14,
-			color: theme.palette.error.light,
+			value: takenDays,
+			color: theme.palette.secondary.main,
 		},
 	];
 	return <Chart data={data} />;

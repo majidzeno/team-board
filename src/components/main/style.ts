@@ -21,4 +21,7 @@ export const Container = styled.div`
 
 export const Panel = styled.div`
 	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
 `;

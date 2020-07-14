@@ -9,16 +9,16 @@ export const ListWrapper: any = styled.div`
 	align-items: flex-start;
 	align-items: center;
 	flex-direction: column;
-	/* border:1px solid pink; */
-	/* background-color: ${({ theme }) => theme.background};
 	justify-content: space-around;
-	width: 300px;
-	height: 500px;
-	background: ${({ theme }) => theme.cardBackgroundColor};
-	box-shadow: ${({ theme }) => theme.cardShadow};
-	border:1px solid ${({ theme }) => theme.lightBr};
-	border-radius: 33px; */
+	border: 1px solid ${({ theme }) => theme.palette.grey[400]};
+	border-radius: 33px;
+	flex: 1;
+	width: 100%;
+	max-width: 30%;
+	overflow: hidden;
+	justify-content: flex-start;
 `;
+
 const Title = styled.h6`
 	font-family: primaryFontMedium;
 	font-size: ${typescale.header6};
@@ -28,23 +28,20 @@ const Title = styled.h6`
 	border-bottom: 1px solid;
 	padding: 7px 15px;
 	border-bottom: 1px solid ${({ theme }) => theme.palette.grey[400]};
-	background-color: ${({ theme }) => theme.palette.info.light};
+	background-color: ${({ theme }) => theme.palette.primary.main};
 	color: ${({ theme }) => theme.palette.primary.contrastText};
 `;
 
 const ItemsList = styled.ul`
-	/* background-color: ${({ theme }) => theme.palette.grey[200]}; */
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	/* padding-left: 15px; */
-	li {&:last-child{
-		border:none;
-		/* background-color: red; */
+	li {
+		&:last-child {
+			border: none;
 		}
 	}
-
 `;
 
 const Item = styled.li`
@@ -59,6 +56,16 @@ const Item = styled.li`
 	/* border: 1px solid ${({ theme }) => theme.palette.grey[400]}; */
 `;
 
+export const ListItem: any = styled.div`
+	display: flex;
+`;
+const Legend = styled.div`
+	width: 80px;
+`;
+const Value = styled.div``;
+
 ListWrapper.Title = Title;
 ListWrapper.ItemsList = ItemsList;
 ListWrapper.Item = Item;
+ListItem.Legend = Legend;
+ListItem.Value = Value;

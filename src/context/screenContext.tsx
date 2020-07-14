@@ -39,8 +39,6 @@ export const ScreenProvider = ({ children }: ScreenProps) => {
 	const [state, dispatch] = React.useReducer(reducer, defaultState);
 
 	const activateTab = ({ activeTab }: { activeTab: string }) => {
-		console.log("activeTab is ", activeTab);
-
 		dispatch({ type: "ACTIVATE_TAB", payload: { activeTab } });
 	};
 	return <CtxProvider value={{ state, activateTab }}>{children}</CtxProvider>;

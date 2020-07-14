@@ -9,23 +9,7 @@ type Data = {
 	value: number;
 	color: string;
 };
-const theme = {
-	axis: {
-		textColor: "#eee",
-		fontSize: "14px",
-		tickColor: "#eee",
-	},
-	grid: {
-		stroke: "red",
-		strokeWidth: 1,
-	},
-	// Remaining: {
-	// 	stroke: "red",
-	// },
-	// Taken: {
-	// 	stroke: "yellow",
-	// },
-};
+
 const Chart = ({ data }: { data: Data[] }) => {
 	return (
 		<ResponsivePie

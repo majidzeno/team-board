@@ -17,7 +17,6 @@ import { useTheme } from "@material-ui/core/styles";
 const listItemsData = ["dashboard", "me", "team", "tasks"];
 const SidebarItem = ({ name, first }: { name: string; first: boolean }) => {
 	const { state, activateTab }: { state: any; activateTab: any } = useTabs();
-	console.log("state", state);
 	const theme = useTheme();
 
 	return (
