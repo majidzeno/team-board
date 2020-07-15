@@ -9,23 +9,7 @@ type Data = {
 	value: number;
 	color: string;
 };
-const theme = {
-	axis: {
-		textColor: "#eee",
-		fontSize: "14px",
-		tickColor: "#eee",
-	},
-	grid: {
-		stroke: "red",
-		strokeWidth: 1,
-	},
-	// Remaining: {
-	// 	stroke: "red",
-	// },
-	// Taken: {
-	// 	stroke: "yellow",
-	// },
-};
+
 const Chart = ({ data }: { data: Data[] }) => {
 	return (
 		<ResponsivePie
@@ -47,10 +31,6 @@ const Chart = ({ data }: { data: Data[] }) => {
 			radialLabelsLinkStrokeWidth={1}
 			radialLabelsLinkColor={{ from: "color" }}
 			slicesLabelsSkipAngle={10}
-			// slicesLabelsTextColor={{
-			// 	from: "color",
-			// 	modifiers: [["brighter", "0.5"]],
-			// }}
 			slicesLabelsTextColor="#fff"
 			animate={true}
 			motionStiffness={90}

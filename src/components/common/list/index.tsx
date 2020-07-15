@@ -1,14 +1,13 @@
 /** @format */
 
 import React from "react";
-import { ListWrapper } from "./style";
-import Card from "../card";
 import { useTheme } from "@material-ui/core/styles";
+import { ListWrapper } from "./style";
 
 const List = ({ title, data }: { title: string; data: string[] }) => {
 	const theme = useTheme();
 	return (
-		<Card
+		<ListWrapper
 			style={{
 				height: "100%",
 				borderRadius: "15px",
@@ -20,7 +19,7 @@ const List = ({ title, data }: { title: string; data: string[] }) => {
 					<ListWrapper.Item key={item + i}>{item}</ListWrapper.Item>
 				))}
 			</ListWrapper.ItemsList>
-		</Card>
+		</ListWrapper>
 	);
 };
 

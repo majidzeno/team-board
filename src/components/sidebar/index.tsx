@@ -1,6 +1,8 @@
 /** @format */
 
 import React from "react";
+import { useTheme } from "@material-ui/core/styles";
+
 import {
 	SidebarContainer,
 	User,
@@ -9,17 +11,14 @@ import {
 	SidebarContainerInner,
 } from "./style";
 import SvgIcon from "../svgIcons";
-import userPlacholder from "../../assets/Images/ph.png";
-// import Button from "../common/button";
-import { useTabs } from "../../context/screenContext";
-import { useTheme } from "@material-ui/core/styles";
+
+import { useTabs } from "context/screenContext";
+import { useUserState } from "context/userContext";
 
 const listItemsData = ["dashboard", "me", "team", "tasks"];
 const SidebarItem = ({ name, first }: { name: string; first: boolean }) => {
 	const { state, activateTab }: { state: any; activateTab: any } = useTabs();
-	console.log("state", state);
 	const theme = useTheme();
-
 	return (
 		<ListItemOuter key={name}>
 			<ListItemInner
@@ -37,7 +36,8 @@ const SidebarItem = ({ name, first }: { name: string; first: boolean }) => {
 };
 
 const Sidebar = (props: any) => {
-	const { darkThemeActive, setDarkThemeActive } = props;
+	const UserState = useUserState();
+
 	const sidebarListItems = listItemsData.map((item: string, i: number) => {
 		return <SidebarItem name={item} key={item} first={i === 0} />;
 	});
@@ -52,16 +52,22 @@ const Sidebar = (props: any) => {
 				</SidebarContainer.LogoOuterContainer>
 				<SidebarContainer.UserOuterContainer>
 					<SidebarContainer.UserInnerContainer>
-						<User>
-							<User.Img
-								style={{ backgroundImage: `url(${userPlacholder})` }}
-								altText="userImagePlacholder"
-							/>
-							<User.Data>
-								<User.Data.Name>AbdelGhafour Doe</User.Data.Name>
-								<User.Data.Position>CEO</User.Data.Position>
-							</User.Data>
-						</User>
+						{UserState.personalData.name && (
+							<User>
+								<User.Img
+									style={{
+										backgroundImage: `url(${UserState.personalData.imageUrl})`,
+									}}
+									altText="userImagePlacholder"
+								/>
+								<User.Data>
+									<User.Data.Name>{UserState.personalData.name}</User.Data.Name>
+									<User.Data.Position>
+										{UserState.personalData.position}
+									</User.Data.Position>
+								</User.Data>
+							</User>
+						)}
 					</SidebarContainer.UserInnerContainer>
 				</SidebarContainer.UserOuterContainer>
 				<SidebarContainer.ItemsOuterContainer>
@@ -70,9 +76,6 @@ const Sidebar = (props: any) => {
 					</SidebarContainer.ItemsInnerContainer>
 				</SidebarContainer.ItemsOuterContainer>
 			</SidebarContainerInner>
-			{/* <Button onClick={() => setDarkThemeActive(!darkThemeActive)}>
-				{darkThemeActive ? "Light Theme" : "Dark Theme"}
-			</Button> */}
 		</SidebarContainer>
 	);
 };

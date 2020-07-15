@@ -2,10 +2,52 @@
 
 import { createMuiTheme } from "@material-ui/core";
 
-export const defaultTheme = createMuiTheme({});
+export const defaultTheme = createMuiTheme({
+	overrides: {
+		MuiCssBaseline: {
+			"@global": {},
+		},
+		MuiButton: {
+			root: {
+				textTransform: "capitalize",
+				fontFamily: "primaryFontRegular",
+			},
+		},
+	},
+	typography: {
+		button: {
+			fontSize: "10rem",
+		},
+		fontFamily: [
+			"Helvetica Neue",
+			"-apple-system",
+			"BlinkMacSystemFont",
+			"Segoe UI",
+			"Roboto",
+			"Arial",
+			"sans-serif",
+			"Apple Color Emoji",
+			"Segoe UI Emoji",
+			"Segoe UI Symbol",
+		].join(","),
+	},
+});
 export const darkTheme = createMuiTheme({
 	palette: {
 		type: "dark",
+	},
+	overrides: {
+		MuiButton: {
+			root: {
+				// textTransform: "capitalize",
+				fontFamily: "primaryFontRegular",
+			},
+		},
+	},
+	typography: {
+		button: {
+			textTransform: "none",
+		},
 	},
 });
 

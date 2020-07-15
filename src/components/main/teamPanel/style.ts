@@ -1,7 +1,7 @@
 /** @format */
 
 import styled from "styled-components/macro";
-import { typescale } from "../../utils/typography";
+import { typescale } from "utils/typography";
 
 export const TeamWrapper: any = styled.div`
 	display: flex;
@@ -18,6 +18,7 @@ export const MemberWrapper: any = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
 `;
 
 export const Member: any = styled.div`

@@ -3,7 +3,8 @@
 import styled from "styled-components/macro";
 import { NavLink } from "react-router-dom";
 import { applyStyleModifiers } from "styled-components-modifiers";
-import { typescale } from "../../utils/typography";
+
+import { typescale } from "utils/typography";
 
 export const SidebarContainer: any = styled.aside`
 	display: flex;
@@ -13,20 +14,19 @@ export const SidebarContainer: any = styled.aside`
 	width: 100%;
 	height: 100vh;
 	justify-content: space-between;
-	background-color: ${({ theme }) => theme.palette.grey[200]};
-	border: 1px solid ${({ theme }) => theme.palette.grey[400]};
 `;
 export const SidebarContainerInner = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
+	background-color: ${({ theme }) => theme.palette.grey[200]};
+	border: 1px solid ${({ theme }) => theme.palette.grey[400]};
 `;
 const LogoOuterContainer = styled.div`
 	width: 100%;
 `;
 const LogoInnerContainer = styled.div`
-	/* border-bottom-right-radius: 40px; */
 	svg {
 		width: 100%;
 		padding: 15px;
@@ -38,7 +38,6 @@ const UserOuterContainer = styled.div`
 `;
 const UserInnerContainer = styled.div`
 	background-color: ${({ theme }) => theme.palette.grey[200]};
-	/* border-bottom-right-radius: 40px; */
 	display: flex;
 	width: 100%;
 `;
@@ -47,7 +46,6 @@ export const User: any = styled.div`
 	margin-top: 200px;
 	width: 100%;
 	display: flex;
-	/* padding: 3px; */
 	align-items: center;
 	justify-content: center;
 	border: 1px solid ${({ theme }) => theme.palette.grey[400]};
@@ -133,28 +131,11 @@ export const ListItemInner: any = styled(NavLink)`
 	}
 	&:hover {
 		background-color: ${({ theme }) => theme.palette.grey[300]};
-		/* font-size: ${({ theme }) => theme.buttonTextSizeOnHover}; */
-		/* border-radius: 30px 0 0 30px; */
-		/* color: ${({ theme }) => theme.textColorPrimary}; */
-		/* path {
-			fill: ${({ theme }) => theme.textColorPrimary};
-		} */
 	}
-	&:focus {
-		/* outline: 1px solid ${({ theme }) => theme.sidebarBr}; */
-		/* box-shadow: -8px -8px 16px #e0e0e014, 8px 8px 16px rgba(0, 83, 128, 0.4); */
-		/* outline-offset: 3px; */
-	}
+	
 	&:active {
 		background-color: ${({ theme }) => theme.palette.grey[300]};
-		/* color: ${({ theme }) => theme.textColorPrimary}; */
-		/* font-size: ${({ theme }) => theme.buttonTextSize}; */
 	font-size: ${typescale.header6};
-		/* box-shadow: -8px -8px 16px rgba(0, 207, 248, 0.22), */
-			/* 8px 8px 16px rgba(0, 153, 184, 0.38); */
-		/* path {
-			fill: ${({ theme }) => theme.textColorPrimary};
-		} */
 	}
 	${applyStyleModifiers(LIST_ITEM_STATE)};
 `;
@@ -162,6 +143,7 @@ export const ListItemInner: any = styled(NavLink)`
 const Text = styled.div`
 	text-transform: capitalize;
 `;
+
 ListItemInner.Text = Text;
 SidebarContainer.LogoOuterContainer = LogoOuterContainer;
 SidebarContainer.LogoInnerContainer = LogoInnerContainer;

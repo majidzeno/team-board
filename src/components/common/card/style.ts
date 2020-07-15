@@ -9,11 +9,14 @@ export const CardContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	width: 300px;
+	width: 320px;
 	height: 500px;
 	/* background: ${({ theme }) => theme.cardBackgroundColor}; */
 	/* box-shadow: ${({ theme }) => theme.cardShadow}; */
-	border:1px solid ${({ theme }) => theme.lightBr};
+	border:1px solid ${({ theme }) => theme.palette.grey[400]};
 	border-radius: 33px;
 	overflow:hidden;
+	flex:1;
+	margin:15px;
+	max-width:30%;
 `;

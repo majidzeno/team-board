@@ -2,10 +2,10 @@
 
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "polished";
-import HelvticaBold from "../assets/fonts/helveticaneue/HelveticaNeuBold.ttf";
-import HelvticaMedium from "../assets/fonts/helveticaneue/HelveticaNeueMedium.ttf";
-import HelvticaRegular from "../assets/fonts/helveticaneue/HelveticaNeue.ttf";
-import HelvticaLight from "../assets/fonts/helveticaneue/HelveticaNeueLight.ttf";
+import HelvticaBold from "assets/fonts/helveticaneue/HelveticaNeuBold.ttf";
+import HelvticaMedium from "assets/fonts/helveticaneue/HelveticaNeueMedium.ttf";
+import HelvticaRegular from "assets/fonts/helveticaneue/HelveticaNeue.ttf";
+import HelvticaLight from "assets/fonts/helveticaneue/HelveticaNeueLight.ttf";
 // import { defaultTheme, darkTheme } from "./themes";
 
 export const GlobalStyles = createGlobalStyle<{ darkThemeActive: boolean }>`

@@ -1,18 +1,15 @@
 /** @format */
 
 import React from "react";
-import { MainContainer } from "./style";
-// import SvgIcon from "../svgIcons";
-// import userPlacholder from "../../assets/Images/ph.png";
-// import { useTabs } from "../../context/screenContext";
 import { Route } from "react-router-dom";
-import Me from "./me";
-import Tasks from "./tasks";
-import Team from "./team";
+
+import { MainContainer } from "./style";
+import Me from "./mePanel";
+import Tasks from "./tasksPanel";
+import Team from "./teamPanel";
 import Dashboard from "./dashboardPanel";
 
-export const Main = (props: any) => {
-	// const { state, activateTab }: { state: any; activateTab: any } = useTabs();
+export const Main = () => {
 	return (
 		<MainContainer>
 			<Route exact path="/me" component={Me} />
