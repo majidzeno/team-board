@@ -8,7 +8,7 @@ import { MainContainer } from "./style";
 import { Route } from "react-router-dom";
 import Me from "./mePanel";
 import Tasks from "./tasks";
-import Team from "./team";
+import Team from "./teamPanel";
 import Dashboard from "./dashboardPanel";
 
 export const Main = (props: any) => {

@@ -24,6 +24,26 @@ const initialState = {
 			),
 		},
 	],
+	team: [
+		{
+			id: "Sayed",
+			imageUrl: "/static/media/sayed.a344d3c9.jpg",
+			name: "Sayed Koshary",
+			position: "COO",
+		},
+		{
+			id: "ibrahim",
+			imageUrl: "/static/media/sardina.68a067ec.jpg",
+			name: "Ibahim Sardina",
+			position: "Advisor",
+		},
+		{
+			id: "mrFhim",
+			imageUrl: "/static/media/fahim.e5639add.png",
+			name: "Mr Fahim",
+			position: "CFO",
+		},
+	],
 };
 type UserProps = {
 	children: React.ReactNode;
