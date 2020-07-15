@@ -10,7 +10,7 @@ const initialState = {
 	personalData: {
 		name: "AbdelGhafour Doe",
 		position: "CEO",
-		imageUrl: "assets/Images/ph.png",
+		imageUrl: "/Images/ph.png",
 	},
 
 	vacationsRequests: [
@@ -27,19 +27,19 @@ const initialState = {
 	team: [
 		{
 			id: "Sayed",
-			imageUrl: "/static/media/sayed.a344d3c9.jpg",
+			imageUrl: "/Images/sayed.jpg",
 			name: "Sayed Koshary",
 			position: "COO",
 		},
 		{
 			id: "ibrahim",
-			imageUrl: "/static/media/sardina.68a067ec.jpg",
+			imageUrl: "/Images/sardina.jpg",
 			name: "Ibahim Sardina",
 			position: "Advisor",
 		},
 		{
 			id: "mrFhim",
-			imageUrl: "/static/media/fahim.e5639add.png",
+			imageUrl: "/Images/fahim.png",
 			name: "Mr Fahim",
 			position: "CFO",
 		},
