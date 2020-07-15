@@ -3,7 +3,6 @@
 import styled from "styled-components/macro";
 import { NavLink } from "react-router-dom";
 import { applyStyleModifiers } from "styled-components-modifiers";
-
 import { typescale } from "utils/typography";
 
 export const SidebarContainer: any = styled.aside`
