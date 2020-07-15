@@ -1,16 +1,19 @@
 /** @format */
 
 import React from "react";
+
 import { MemberWrapper, Member } from "./style";
-import { CloseIcon } from "../../common/commonStyles";
-import { useUserDispatch } from "../../../context/userContext";
-import { removeTeamMember } from "../../../context/actions";
+import { CloseIcon } from "components/common/commonStyles";
+import { useUserDispatch } from "context/userContext";
+import { removeTeamMember } from "context/actions";
+
 type MemberDataType = {
 	id: string;
 	name: string;
 	position: string;
 	imageUrl: string;
 };
+
 const MemberComponent = ({ id, imageUrl, name, position }: MemberDataType) => {
 	const UserDispatch = useUserDispatch();
 	return (

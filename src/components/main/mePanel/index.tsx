@@ -1,15 +1,15 @@
 /** @format */
 
 import React from "react";
-import { Panel } from "../style";
-import { MeContainer, ButtonLink } from "./style";
-import userPlacholder from "../../../assets/Images/ph.png";
-import { FormWrapper, FieldWrapper } from "../dashboardPanel/style";
 import { TextField } from "@material-ui/core";
 import { Field, Formik } from "formik";
 import * as Yup from "yup";
-import { useUserState, useUserDispatch } from "../../../context/userContext";
-import { updatePersonalData } from "../../../context/actions";
+
+import { Panel } from "../style";
+import { MeContainer, ButtonLink } from "./style";
+import { FormWrapper, FieldWrapper } from "../dashboardPanel/style";
+import { useUserState, useUserDispatch } from "context/userContext";
+import { updatePersonalData } from "context/actions";
 
 const Me: React.FC = () => {
 	const [editMode, setEditMode] = React.useState(false);

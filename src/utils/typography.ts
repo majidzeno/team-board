@@ -12,5 +12,3 @@ export const typescale = {
 	helperText: "0.694rem",
 	copyrightText: "0.579rem",
 };
-
-//   export const primaryFont =

@@ -1,6 +1,8 @@
 /** @format */
 
 import React from "react";
+import { useTheme } from "@material-ui/core/styles";
+
 import {
 	SidebarContainer,
 	User,
@@ -9,11 +11,9 @@ import {
 	SidebarContainerInner,
 } from "./style";
 import SvgIcon from "../svgIcons";
-import userPlacholder from "../../assets/Images/ph.png";
-// import Button from "../common/button";
-import { useTabs } from "../../context/screenContext";
-import { useTheme } from "@material-ui/core/styles";
-import { useUserState } from "../../context/userContext";
+
+import { useTabs } from "context/screenContext";
+import { useUserState } from "context/userContext";
 
 const listItemsData = ["dashboard", "me", "team", "tasks"];
 const SidebarItem = ({ name, first }: { name: string; first: boolean }) => {
@@ -36,13 +36,8 @@ const SidebarItem = ({ name, first }: { name: string; first: boolean }) => {
 };
 
 const Sidebar = (props: any) => {
-	const { darkThemeActive, setDarkThemeActive } = props;
 	const UserState = useUserState();
-	console.log("UserState", UserState);
 
-	// React.useEffect(() => {
-	// 	console.log("UserState ins sidebard", UserState);
-	// }, [UserState.personalData.name]);
 	const sidebarListItems = listItemsData.map((item: string, i: number) => {
 		return <SidebarItem name={item} key={item} first={i === 0} />;
 	});
@@ -59,10 +54,6 @@ const Sidebar = (props: any) => {
 					<SidebarContainer.UserInnerContainer>
 						{UserState.personalData.name && (
 							<User>
-								{console.log(
-									"UserState.personalData.name",
-									UserState.personalData.name
-								)}
 								<User.Img
 									style={{
 										backgroundImage: `url(${UserState.personalData.imageUrl})`,
@@ -85,9 +76,6 @@ const Sidebar = (props: any) => {
 					</SidebarContainer.ItemsInnerContainer>
 				</SidebarContainer.ItemsOuterContainer>
 			</SidebarContainerInner>
-			{/* <Button onClick={() => setDarkThemeActive(!darkThemeActive)}>
-				{darkThemeActive ? "Light Theme" : "Dark Theme"}
-			</Button> */}
 		</SidebarContainer>
 	);
 };

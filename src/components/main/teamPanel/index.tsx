@@ -1,11 +1,6 @@
 /** @format */
 
 import React from "react";
-import { Panel } from "../style";
-import AddMemberForm from "./addMemberForm";
-import Member from "./member";
-import { TeamWrapper } from "./style";
-import { useUserState } from "../../../context/userContext";
 import {
 	Modal,
 	Button,
@@ -14,6 +9,12 @@ import {
 	makeStyles,
 	createStyles,
 } from "@material-ui/core";
+
+import { Panel } from "../style";
+import AddMemberForm from "./addMemberForm";
+import Member from "./member";
+import { TeamWrapper } from "./style";
+import { useUserState } from "context/userContext";
 
 type MemberDataType = {
 	id: string;

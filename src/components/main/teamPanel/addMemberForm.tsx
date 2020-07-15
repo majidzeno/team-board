@@ -2,12 +2,13 @@
 
 import React from "react";
 import { Formik, Field } from "formik";
-import { addTeamMember } from "../../../context/actions";
-import { FormWrapper, FieldWrapper } from "../dashboardPanel/style";
 import { TextField } from "@material-ui/core";
-import { ButtonsWrapper, ButtonLink } from "../../common/commonStyles";
-import { useUserDispatch } from "../../../context/userContext";
 import * as Yup from "yup";
+
+import { addTeamMember } from "context/actions";
+import { FormWrapper, FieldWrapper } from "../dashboardPanel/style";
+import { ButtonsWrapper, ButtonLink } from "components/common/commonStyles";
+import { useUserDispatch } from "context/userContext";
 type Func = {
 	handleClose: () => void;
 };
@@ -32,7 +33,6 @@ const AddMemberForm: React.FC<Func> = ({ handleClose }) => {
 				validationSchema={MemberSchema}
 				onSubmit={(values) => {
 					UserDispatch(addTeamMember(values));
-					// setEditMode(false)
 					handleClose();
 				}}>
 				{({ values, setFieldValue, handleSubmit }) => {
@@ -73,7 +73,6 @@ const AddMemberForm: React.FC<Func> = ({ handleClose }) => {
 							</FieldWrapper>
 							<ButtonsWrapper>
 								<ButtonLink
-									// onClick={() => setEditMode(false)}
 									onClick={handleClose}
 									variant="outlined"
 									color="secondary">

@@ -1,8 +1,7 @@
 /** @format */
-import { Button } from "@material-ui/core";
 
 import styled from "styled-components/macro";
-import { typescale } from "../../../utils/typography";
+import { typescale } from "utils/typography";
 
 export const TeamWrapper: any = styled.div`
 	display: flex;

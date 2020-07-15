@@ -2,18 +2,17 @@
 
 import React from "react";
 import { Formik, Field } from "formik";
-import { FormWrapper, FieldWrapper } from "./style";
 import { TextField, Button } from "@material-ui/core";
 import * as Yup from "yup";
-
 import { DatePicker } from "formik-material-ui-pickers";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
-
 import DateFnsUtils from "@date-io/date-fns";
 import differenceInBusinessDays from "date-fns/differenceInBusinessDays";
 import { addBusinessDays, add } from "date-fns";
-import { useUserDispatch } from "../../../context/userContext";
-import { addVacationRequest } from "../../../context/actions";
+import { FormWrapper, FieldWrapper } from "./style";
+
+import { useUserDispatch } from "context/userContext";
+import { addVacationRequest } from "context/actions";
 
 let credit = 21;
 const calcDays = (date1: any, date2: any) => {
@@ -107,7 +106,6 @@ const FormContainer: React.FC<Func> = ({ handleClose }) => {
 										value={values.days}
 									/>
 								</FieldWrapper>
-								{/* {isSubmitting && <LinearProgress />} */}
 								<div>
 									<Button
 										color="primary"

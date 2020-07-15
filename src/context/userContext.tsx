@@ -10,7 +10,7 @@ const initialState = {
 	personalData: {
 		name: "AbdelGhafour Doe",
 		position: "CEO",
-		imageUrl: "/static/media/ph.fc98e012.png",
+		imageUrl: "assets/Images/ph.png",
 	},
 
 	vacationsRequests: [
@@ -42,6 +42,16 @@ const initialState = {
 			imageUrl: "/static/media/fahim.e5639add.png",
 			name: "Mr Fahim",
 			position: "CFO",
+		},
+	],
+	activeTasks: [
+		{
+			id: "85845n",
+			taskTitle: "Lakehouse App",
+		},
+		{
+			id: "74hn2",
+			taskTitle: "Tree App",
 		},
 	],
 };

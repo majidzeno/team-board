@@ -31,10 +31,6 @@ const Chart = ({ data }: { data: Data[] }) => {
 			radialLabelsLinkStrokeWidth={1}
 			radialLabelsLinkColor={{ from: "color" }}
 			slicesLabelsSkipAngle={10}
-			// slicesLabelsTextColor={{
-			// 	from: "color",
-			// 	modifiers: [["brighter", "0.5"]],
-			// }}
 			slicesLabelsTextColor="#fff"
 			animate={true}
 			motionStiffness={90}

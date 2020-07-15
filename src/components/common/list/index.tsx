@@ -1,9 +1,8 @@
 /** @format */
 
 import React from "react";
-import { ListWrapper } from "./style";
-import Card from "../card";
 import { useTheme } from "@material-ui/core/styles";
+import { ListWrapper } from "./style";
 
 const List = ({ title, data }: { title: string; data: string[] }) => {
 	const theme = useTheme();

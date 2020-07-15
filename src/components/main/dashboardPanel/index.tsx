@@ -1,14 +1,6 @@
 /** @format */
 
 import React from "react";
-import Card from "../../common/card";
-import {
-	ChartContainer,
-	ButtonWrapper,
-	VacationsHistoryWrapper,
-} from "./style";
-import { Panel } from "../style";
-import Chart from "../../chart";
 import {
 	Button,
 	Modal,
@@ -17,13 +9,16 @@ import {
 	Theme,
 	createStyles,
 } from "@material-ui/core";
-import Form from "./form";
-import { useUserState } from "../../../context/userContext";
 import { useSpring, animated } from "react-spring/web.cjs";
-import { parseISO, parseJSON, format } from "date-fns";
-import * as dateFns from "date-fns";
-import { ListWrapper, ListItem } from "../../common/list/style";
-import { useTheme } from "@material-ui/core/styles";
+import { format } from "date-fns";
+
+import Chart from "components/chart";
+import Card from "components/common/card";
+import { ListWrapper, ListItem } from "components/common/list/style";
+import { ChartContainer, ButtonWrapper } from "./style";
+import { Panel } from "../style";
+import { useUserState } from "context/userContext";
+import Form from "./requestVacationForm";
 
 const parseDate = (date: any) => format(date, "MM/dd/yyyy");
 const useStyles = makeStyles((theme: Theme) =>
@@ -94,9 +89,7 @@ const DashboardPanel = () => {
 					<Button
 						onClick={() => setOpen(true)}
 						variant="contained"
-						color="primary"
-						// style={{ textTransform: "capitalize" }}
-					>
+						color="primary">
 						Request Vacation
 					</Button>
 				</ButtonWrapper>
@@ -124,12 +117,10 @@ const DashboardPanel = () => {
 			<ListWrapper
 				style={{
 					borderRadius: "15px",
-					// backgroundColor: theme.palette.grey[300],
 					margin: "15px",
 				}}>
 				<ListWrapper.Title>Vacations History</ListWrapper.Title>
 				<ListWrapper.ItemsList>
-					{/* <VacationsHistoryWrapper> */}
 					{UserState.vacationsRequests.length > 0 &&
 						UserState.vacationsRequests.map(
 							(
@@ -160,7 +151,6 @@ const DashboardPanel = () => {
 								</ListWrapper.Item>
 							)
 						)}
-					{/* </VacationsHistoryWrapper> */}
 				</ListWrapper.ItemsList>
 			</ListWrapper>
 		</Panel>

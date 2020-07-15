@@ -19,6 +19,11 @@ type MemberDataType = {
 	position: string;
 	imageUrl: string;
 };
+
+type TaskType = {
+	id: string;
+	taskTitle: string;
+};
 type TeamDataType = MemberDataType[];
 
 export const addVacationRequest = (vacationsRequests: VacationReqType) => {
@@ -62,6 +67,26 @@ export const removeTeamMember = (memberId: string) => {
 		type: actionTypes.REMOVE_TEAM_MEMBER,
 		payload: {
 			memberId: memberId,
+		},
+	};
+};
+export const addActiveTask = (activeTask: TaskType) => {
+	return {
+		type: actionTypes.ADD_ACTIVE_TASK,
+		payload: {
+			activeTask: {
+				id: activeTask.id,
+				taskTitle: activeTask.taskTitle,
+			},
+		},
+	};
+};
+
+export const removeActiveTask = (taskId: string) => {
+	return {
+		type: actionTypes.REMOVE_ACTIVE_TASK,
+		payload: {
+			taskId: taskId,
 		},
 	};
 };

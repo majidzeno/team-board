@@ -1,8 +1,7 @@
 /** @format */
 
 import styled from "styled-components/macro";
-import { typescale } from "../../../utils/typography";
-// import Card from "../card";
+import { typescale } from "utils/typography";
 
 export const ListWrapper: any = styled.div`
 	display: flex;
@@ -48,12 +47,10 @@ const Item = styled.li`
 	margin: 0;
 	font-family: primaryFontRegular;
 	font-size: ${typescale.subtitle};
-	font-weight:bold;
-	border-bottom:1px solid ${({ theme }) => theme.palette.grey[400]};
-    padding: 5px 15px;
-	background-color:${({ theme }) => theme.palette.common.white};
-	
-	/* border: 1px solid ${({ theme }) => theme.palette.grey[400]}; */
+	font-weight: bold;
+	border-bottom: 1px solid ${({ theme }) => theme.palette.grey[400]};
+	padding: 5px 15px;
+	background-color: ${({ theme }) => theme.palette.common.white};
 `;
 
 export const ListItem: any = styled.div`
