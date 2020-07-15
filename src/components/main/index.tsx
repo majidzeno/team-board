@@ -6,7 +6,7 @@ import { MainContainer } from "./style";
 // import userPlacholder from "../../assets/Images/ph.png";
 // import { useTabs } from "../../context/screenContext";
 import { Route } from "react-router-dom";
-import Me from "./me";
+import Me from "./mePanel";
 import Tasks from "./tasks";
 import Team from "./team";
 import Dashboard from "./dashboardPanel";

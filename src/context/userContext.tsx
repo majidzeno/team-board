@@ -7,6 +7,12 @@ const UserStateContext = React.createContext(undefined);
 const UserDispatchContext = React.createContext(undefined);
 
 const initialState = {
+	personalData: {
+		name: "AbdelGhafour Doe",
+		position: "CEO",
+		imageUrl: "/static/media/ph.fc98e012.png",
+	},
+
 	vacationsRequests: [
 		{
 			days: 5,

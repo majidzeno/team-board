@@ -95,7 +95,8 @@ const DashboardPanel = () => {
 						onClick={() => setOpen(true)}
 						variant="contained"
 						color="primary"
-						style={{ textTransform: "capitalize" }}>
+						// style={{ textTransform: "capitalize" }}
+					>
 						Request Vacation
 					</Button>
 				</ButtonWrapper>

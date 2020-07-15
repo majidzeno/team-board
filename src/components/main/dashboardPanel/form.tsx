@@ -1,9 +1,9 @@
 /** @format */
 
 import React from "react";
-import { Formik, Field, Form } from "formik";
-import { FormWrapper, FieldWrapper, Btn } from "./style";
-import { Button, LinearProgress, TextField } from "@material-ui/core";
+import { Formik, Field } from "formik";
+import { FormWrapper, FieldWrapper } from "./style";
+import { TextField, Button } from "@material-ui/core";
 import * as Yup from "yup";
 
 import { DatePicker } from "formik-material-ui-pickers";
@@ -109,14 +109,15 @@ const FormContainer: React.FC<Func> = ({ handleClose }) => {
 								</FieldWrapper>
 								{/* {isSubmitting && <LinearProgress />} */}
 								<div>
-									<Btn
+									<Button
 										color="primary"
 										variant="contained"
 										type="submit"
 										onClick={() => handleSubmit()}
-										disabled={isSubmitting || (!values.from && !values.to)}>
+										disabled={isSubmitting || (!values.from && !values.to)}
+										style={{ textTransform: "capitalize" }}>
 										Submit Vacation Request
-									</Btn>
+									</Button>
 								</div>
 							</FormWrapper>
 						);

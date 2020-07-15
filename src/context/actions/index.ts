@@ -14,3 +14,20 @@ export const addVacationRequest = (vacationsRequests: {
 		},
 	};
 };
+
+export const updatePersonalData = (personalData: {
+	name: string;
+	position: string;
+	imageUrl: string;
+}) => {
+	return {
+		type: actionTypes.UPDATE_PERSONAL_DATA,
+		payload: {
+			personalData: {
+				name: personalData.name,
+				position: personalData.position,
+				imageUrl: personalData.imageUrl,
+			},
+		},
+	};
+};
