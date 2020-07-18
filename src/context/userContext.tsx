@@ -8,9 +8,9 @@ const UserDispatchContext = React.createContext(undefined);
 
 const initialState = {
 	personalData: {
-		name: "AbdelGhafour Doe",
+		name: "John Doe",
 		position: "CEO",
-		imageUrl: "/Images/ph.png",
+		imageUrl: "/Images/1.jpg",
 	},
 
 	vacationsRequests: [
@@ -26,21 +26,21 @@ const initialState = {
 	],
 	team: [
 		{
-			id: "Sayed",
-			imageUrl: "/Images/sayed.jpg",
-			name: "Sayed Koshary",
+			id: "663tydbdsy",
+			imageUrl: "/Images/2.jpg",
+			name: "Freddy Doe",
 			position: "COO",
 		},
 		{
-			id: "ibrahim",
-			imageUrl: "/Images/sardina.jpg",
-			name: "Ibahim Sardina",
+			id: "3hbfe7e7f7",
+			imageUrl: "/Images/3.jpg",
+			name: "Jake Doe",
 			position: "Advisor",
 		},
 		{
-			id: "mrFhim",
-			imageUrl: "/Images/fahim.png",
-			name: "Mr Fahim",
+			id: "2373b3bf3",
+			imageUrl: "/Images/4.jpg",
+			name: "Jane Doe",
 			position: "CFO",
 		},
 	],

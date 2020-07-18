@@ -10,9 +10,11 @@ import Notification from "./Notification";
 import Signout from "./Signout";
 import Tasks from "./Tasks";
 import Team from "./Team";
-
+import Svg1 from "./Svg1";
 const SvgIcon = (props: any) => {
 	switch (props.name) {
+		case "svg1":
+			return <Svg1 {...props} />;
 		case "logoShort":
 			return <LogoShort {...props} />;
 		case "logoFull":
